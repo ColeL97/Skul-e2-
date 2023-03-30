@@ -7,69 +7,65 @@ struct LoginView: View {
     @State private var password: String = ""
 
     var body: some View {
-        VStack {
-            Text("Login")
-                .font(.largeTitle)
-                .padding(.bottom, 30)
+    VStack {
+        Text("Login")
+            .font(.largeTitle)
+            .padding(.bottom, 30)
 
-            VStack(alignment: .leading, spacing: 15) {
-                Text("Email")
-                    .font(.headline)
-                TextField("Email", text: $email)
-                    .padding()
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
+    VStack(alignment: .leading, spacing: 15) {
+        Text("Email")
+            .font(.headline)
+        TextField("Email", text: $email)
+            .padding()
+            .background(Color(.systemGray6))
+            .cornerRadius(8)
 
-                Text("Password")
-                    .font(.headline)
-                SecureField("Password", text: $password)
-                    .padding()
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-            }
-            .padding(.horizontal, 30)
+        Text("Password")
+            .font(.headline)
+        SecureField("Password", text: $password)
+            .padding()
+            .background(Color(.systemGray6))
+            .cornerRadius(8)
+    }
+    .padding(.horizontal, 30)
 
-            VStack(spacing: 15) {
-                Button(action: {
-                    loginUser()
-                }) {
-                    Text("Login")
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        .frame(maxWidth: .infinity, minHeight: 50)
-                        .background(Color.blue)
-                        .cornerRadius(8)
-                }
+        VStack(spacing: 15) {
+    Button(action: {
+    Task {
+        await loginUser()
+    }
+}) {
+    Text("Login")
+        .foregroundColor(.white)
+        .font(.headline)
+        .frame(maxWidth: .infinity, minHeight: 50)
+        .background(Color.blue)
+        .cornerRadius(8)
+}
 
-                Button(action: {
-                    // Navigate to Sign up screen
-                }) {
-                    Text("Sign up")
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        .frame(maxWidth: .infinity, minHeight: 50)
-                        .background(Color.green)
-                        .cornerRadius(8)
-                }
-            }
-            .padding(.horizontal, 30)
+            Button(action: {
+    // Navigate to Sign up screen
+            }) {
+                Text("Sign up")
+        .foregroundColor(.white)
+        .font(.headline)
+        .frame(maxWidth: .infinity, minHeight: 50)
+        .background(Color.green)
+        .cornerRadius(8)
+}
+}
+.padding(.horizontal, 30)
             .padding(.top, 30)
 
-            Spacer()
-        }
-        .padding(.top, 50)
+        Spacer()
     }
+    .padding(.top, 50)
+}
 
-    private func loginUser() {
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            if let error = error {
-                print("Error signing in: \(error.localizedDescription)")
-                return
-            }
-            print("User signed in successfully")
-            isLoggedIn = true // Update the isLoggedIn state
-        }
-    }
+    private func loginUser() async {
+        async let isLoggedIn = NetworkCall.makeLogin(userName: email, password: password)
+        self.isLoggedIn = await isLoggedIn
+}
 }
 
 struct LoginView_Previews: PreviewProvider {
@@ -77,5 +73,19 @@ struct LoginView_Previews: PreviewProvider {
 
     static var previews: some View {
         LoginView(isLoggedIn: $dummyIsLoggedIn)
+}
+}
+
+class NetworkCall {
+    static func makeLogin(userName: String, password: String) async -> Bool {
+        try? await Task.sleep(nanoseconds: 10000000)
+        if userName.lowercased() == "cole@skul.app" && password == "mapleleafs" {
+            return true
+        } else if userName.lowercased() == "cole@skul.app" && password == "mapleleafs"{
+            return true
+            } else {
+    return false
+        }
     }
+    
 }

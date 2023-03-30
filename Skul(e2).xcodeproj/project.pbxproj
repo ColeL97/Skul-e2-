@@ -16,8 +16,6 @@
 		A2CEBB2D29CBF89C004060D8 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEBB1529CBF89B004060D8 /* TeamView.swift */; };
 		A2CEBB2E29CBF89C004060D8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEBB1629CBF89B004060D8 /* HomeView.swift */; };
 		A2CEBB2F29CBF89C004060D8 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEBB1729CBF89B004060D8 /* ImagePicker.swift */; };
-		A2CEBB3029CBF89C004060D8 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = A2CEBB1829CBF89B004060D8 /* Resources */; };
-		A2CEBB3129CBF89C004060D8 /* Info.Plist in Resources */ = {isa = PBXBuildFile; fileRef = A2CEBB1929CBF89B004060D8 /* Info.Plist */; };
 		A2CEBB3229CBF89C004060D8 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEBB1A29CBF89B004060D8 /* user.swift */; };
 		A2CEBB3329CBF89C004060D8 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEBB1E29CBF89B004060D8 /* CameraView.swift */; };
 		A2CEBB3429CBF89C004060D8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEBB1F29CBF89B004060D8 /* ProfileView.swift */; };
@@ -33,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		A2CEBADF29CBF760004060D8 /* Skul(e2).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skul(e2).app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2CEBB0C29CBF7F7004060D8 /* Skul(e2)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Skul(e2)-Bridging-Header.h"; sourceTree = "<group>"; };
 		A2CEBB0F29CBF89A004060D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2CEBB1029CBF89A004060D8 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		A2CEBB1129CBF89A004060D8 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -43,10 +40,7 @@
 		A2CEBB1529CBF89B004060D8 /* TeamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		A2CEBB1629CBF89B004060D8 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A2CEBB1729CBF89B004060D8 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		A2CEBB1829CBF89B004060D8 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
-		A2CEBB1929CBF89B004060D8 /* Info.Plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.Plist; sourceTree = "<group>"; };
 		A2CEBB1A29CBF89B004060D8 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
-		A2CEBB1B29CBF89B004060D8 /* Skul(e2).xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Skul(e2).xcodeproj"; sourceTree = "<group>"; };
 		A2CEBB1E29CBF89B004060D8 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		A2CEBB1F29CBF89B004060D8 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A2CEBB2029CBF89C004060D8 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -83,19 +77,15 @@
 				A2CEBB0F29CBF89A004060D8 /* GoogleService-Info.plist */,
 				A2CEBB1629CBF89B004060D8 /* HomeView.swift */,
 				A2CEBB1729CBF89B004060D8 /* ImagePicker.swift */,
-				A2CEBB1929CBF89B004060D8 /* Info.Plist */,
 				A2CEBB1129CBF89A004060D8 /* LoginView.swift */,
 				A2CEBB1429CBF89B004060D8 /* MainTabView.swift */,
 				A2CEBB1329CBF89B004060D8 /* MainView.swift */,
 				A2CEBB1F29CBF89B004060D8 /* ProfileView.swift */,
-				A2CEBB1829CBF89B004060D8 /* Resources */,
 				A2CEBB2429CBF89C004060D8 /* SearchView.swift */,
 				A2CEBB2629CBF89C004060D8 /* Skul(e2)-Bridging-Header.h */,
-				A2CEBB1B29CBF89B004060D8 /* Skul(e2).xcodeproj */,
 				A2CEBB1029CBF89A004060D8 /* SplashView.swift */,
 				A2CEBB1529CBF89B004060D8 /* TeamView.swift */,
 				A2CEBB1A29CBF89B004060D8 /* user.swift */,
-				A2CEBB0C29CBF7F7004060D8 /* Skul(e2)-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,11 +94,6 @@
 			children = (
 				A2CEBADF29CBF760004060D8 /* Skul(e2).app */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A2CEBB1C29CBF89B004060D8 /* Products */ = {
-			isa = PBXGroup;
 			name = Products;
 			sourceTree = "<group>";
 		};
@@ -169,12 +154,6 @@
 			);
 			productRefGroup = A2CEBAE029CBF760004060D8 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = A2CEBB1C29CBF89B004060D8 /* Products */;
-					ProjectRef = A2CEBB1B29CBF89B004060D8 /* Skul(e2).xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				A2CEBADE29CBF760004060D8 /* Skul(e2) */,
@@ -187,10 +166,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2CEBB3129CBF89C004060D8 /* Info.Plist in Resources */,
 				A2CEBB2A29CBF89C004060D8 /* Assets.xcassets in Resources */,
 				A2CEBB2729CBF89C004060D8 /* GoogleService-Info.plist in Resources */,
-				A2CEBB3029CBF89C004060D8 /* Resources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

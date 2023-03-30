@@ -1,4 +1,5 @@
 import SwiftUI
+import Firebase
 
 struct SplashView: View {
     @State private var isActive = false
@@ -18,6 +19,7 @@ struct SplashView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 withAnimation {
                     isActive = true
+                    FirebaseApp.configure()
                 }
             }
         }
