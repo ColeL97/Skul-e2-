@@ -1,7 +1,9 @@
 import SwiftUI
+import AVFoundation
 
 struct PostView: View {
     var post: Post
+    @State private var isPlaying = false
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -17,17 +19,28 @@ struct PostView: View {
                         .resizable()
                         .frame(width: 40, height: 40)
                 }
-                
+
                 Text(post.user.name)
                     .font(.headline)
-                
+
                 Spacer()
             }
             .padding()
 
-            // Add your video player here using the post.videoURL
-            // For example, you can use the AVPlayer from AVKit
-            
+            if let videoURL = URL(string: post.videoURL) {
+                CustomVideoPlayer(url: videoURL, isMuted: true)
+                    .aspectRatio(contentMode: .fill)
+                    .onAppear {
+                        isPlaying = true
+                    }
+                    .onDisappear {
+                        isPlaying = false
+                    }
+            } else {
+                Text("Video not available")
+                    .foregroundColor(.red)
+            }
+
             Text(post.description)
                 .padding(.horizontal)
 

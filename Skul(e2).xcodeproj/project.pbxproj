@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A22142E829F8400E00B2FDBD /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22142E729F8400E00B2FDBD /* VideoPlayer.swift */; };
 		A25F0AC029D6A12100C089A1 /* LikedVideosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25F0ABF29D6A12100C089A1 /* LikedVideosView.swift */; };
 		A25F0AC229D6A13F00C089A1 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25F0AC129D6A13F00C089A1 /* NotesView.swift */; };
 		A25F0AC429D6A94A00C089A1 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25F0AC329D6A94A00C089A1 /* PostView.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A22142E729F8400E00B2FDBD /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		A25F0ABF29D6A12100C089A1 /* LikedVideosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedVideosView.swift; sourceTree = "<group>"; };
 		A25F0AC129D6A13F00C089A1 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		A25F0AC329D6A94A00C089A1 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				A25F0AC929D6AA9700C089A1 /* Post.swift */,
 				A2CEBB2629CBF89C004060D8 /* Skul(e2)-Bridging-Header.h */,
 				A2CEBB1029CBF89A004060D8 /* SplashView.swift */,
+				A22142E729F8400E00B2FDBD /* VideoPlayer.swift */,
 				A2CEBB1529CBF89B004060D8 /* TeamView.swift */,
 				A2CEBB1A29CBF89B004060D8 /* user.swift */,
 			);
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A22142E829F8400E00B2FDBD /* VideoPlayer.swift in Sources */,
 				A2CEBB2929CBF89C004060D8 /* LoginView.swift in Sources */,
 				A25F0AC029D6A12100C089A1 /* LikedVideosView.swift in Sources */,
 				A2CEBB3A29CBF89C004060D8 /* Firebasestorage.swift in Sources */,
