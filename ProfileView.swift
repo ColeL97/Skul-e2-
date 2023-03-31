@@ -5,93 +5,120 @@ struct ProfileView: View {
     @State private var editMode = false
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
+    @State private var navigationSelection: Int? = nil
     
     var body: some View {
-        VStack {
-            if editMode {
-                // Show the user's profile picture, and allow them to change it
-                Image(uiImage: inputImage ?? UIImage(systemName: "person.circle.fill")!)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 150, height: 150)
-                    .clipShape(Circle())
-                    .padding()
-                    .onTapGesture {
-                        showingImagePicker = true
-                    }
-                
-                // Other user details (name, email, bio)
-                
-                Button(action: {
-                    if let image = inputImage {
-                        FirebaseStorageManager.shared.uploadImage(image: image) { result in
-                            switch result {
-                            case .success(let url):
-                                // Save the image URL to the user object, e.g.
-                                user.imageURL = url
-                                saveUserDetails()
-                                editMode.toggle()
-                            case .failure(let error):
-                                print(error.localizedDescription)
-                            }
+        NavigationView {
+            VStack {
+                if editMode {
+                    // Profile picture
+                    Image(uiImage: inputImage ?? UIImage(systemName: "person.circle.fill")!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 150, height: 150)
+                        .clipShape(Circle())
+                        .padding()
+                        .onTapGesture {
+                            showingImagePicker = true
                         }
-                    } else {
+                    
+                    // User name
+                    TextField("Name", text: $user.name)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                    
+                    // Bio
+                    TextField("Bio", text: $user.bio)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                    
+                    // Save button
+                    Button(action: {
                         saveUserDetails()
                         editMode.toggle()
+                    }, label: {
+                        Text("Save")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    })
+                } else {
+                    // Profile picture
+                    Image(uiImage: UIImage(systemName: "person.circle.fill")!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 150, height: 150)
+                        .clipShape(Circle())
+                        .padding()
+                    
+                    // User name
+                    Text(user.name)
+                        .font(.title)
+                        .padding()
+                    
+                    // Bio
+                    Text(user.bio)
+                        .font(.body)
+                        .padding()
+                    
+                    // Edit button
+                    Button(action: {
+                        editMode.toggle()
+                    }, label: {
+                        Text("Edit")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    })
+                }
+                
+                // Navigation links
+                VStack {
+                    Button(action: {
+                        navigationSelection = 1
+                    }) {
+                        Text("Liked Videos")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                     }
-                }, label: {
-                    Text("Save")
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                })
-            } else {
-                // Show the user's profile picture and other details
-                Image(uiImage: UIImage(systemName: "person.circle.fill")!)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 150, height: 150)
-                    .clipShape(Circle())
-                    .padding()
+                    .background(
+                        NavigationLink("", destination: LikedVideosView(), tag: 1, selection: $navigationSelection).opacity(0)
+                    )
+                    
+                    Button(action: {
+                        navigationSelection = 2
+                    }) {
+                        Text("Notes")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    .background(
+                        NavigationLink("", destination: NotesView(), tag: 2, selection: $navigationSelection).opacity(0)
+                    )
+                }.padding()
                 
-                // Other user details (name, email, bio)
-                
-                Button(action: {
-                    editMode.toggle()
-                }, label: {
-                    Text("Edit")
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                })
             }
-        }
-        .padding()
-        .navigationTitle("Profile")
-        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
-            ImagePicker(image: $inputImage)
+            .padding()
+            .navigationTitle("Profile")
+            .sheet(isPresented: $showingImagePicker) {
+                ImagePicker(image: $inputImage)
+            }
         }
     }
     
     func saveUserDetails() {
         // Save the user details, e.g., update the user data in Firebase
-        // Don't forget to save the imageURL too
-    }
-    
-    func loadImage() {
-        guard let inputImage = inputImage else { return }
-        FirebaseStorageManager.shared.uploadImage(image: inputImage) { result in
-            switch result {
-            case .success(let url):
-                // Update the user object with the new image URL
-                user.imageURL = url
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+        // Don't forget
     }
 }
+
