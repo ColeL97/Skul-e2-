@@ -14,7 +14,6 @@
 		A2CEBB2929CBF89C004060D8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEBB1129CBF89A004060D8 /* LoginView.swift */; };
 		A2CEBB2A29CBF89C004060D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2CEBB1229CBF89B004060D8 /* Assets.xcassets */; };
 		A2CEBB2B29CBF89C004060D8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEBB1329CBF89B004060D8 /* MainView.swift */; };
-		A2CEBB2C29CBF89C004060D8 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEBB1429CBF89B004060D8 /* MainTabView.swift */; };
 		A2CEBB2D29CBF89C004060D8 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEBB1529CBF89B004060D8 /* TeamView.swift */; };
 		A2CEBB2E29CBF89C004060D8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEBB1629CBF89B004060D8 /* HomeView.swift */; };
 		A2CEBB2F29CBF89C004060D8 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEBB1729CBF89B004060D8 /* ImagePicker.swift */; };
@@ -40,7 +39,6 @@
 		A2CEBB1129CBF89A004060D8 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A2CEBB1229CBF89B004060D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2CEBB1329CBF89B004060D8 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		A2CEBB1429CBF89B004060D8 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		A2CEBB1529CBF89B004060D8 /* TeamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		A2CEBB1629CBF89B004060D8 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A2CEBB1729CBF89B004060D8 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				A2CEBB1629CBF89B004060D8 /* HomeView.swift */,
 				A2CEBB1729CBF89B004060D8 /* ImagePicker.swift */,
 				A2CEBB1129CBF89A004060D8 /* LoginView.swift */,
-				A2CEBB1429CBF89B004060D8 /* MainTabView.swift */,
 				A2CEBB1329CBF89B004060D8 /* MainView.swift */,
 				A2CEBB1F29CBF89B004060D8 /* ProfileView.swift */,
 				A2CEBB2429CBF89C004060D8 /* SearchView.swift */,
@@ -194,7 +191,6 @@
 				A2CEBB2829CBF89C004060D8 /* SplashView.swift in Sources */,
 				A2CEBB3229CBF89C004060D8 /* user.swift in Sources */,
 				A2CEBB2F29CBF89C004060D8 /* ImagePicker.swift in Sources */,
-				A2CEBB2C29CBF89C004060D8 /* MainTabView.swift in Sources */,
 				A2CEBB3929CBF89C004060D8 /* SearchView.swift in Sources */,
 				A2CEBB3529CBF89C004060D8 /* App.swift in Sources */,
 				A2CEBB3429CBF89C004060D8 /* ProfileView.swift in Sources */,
