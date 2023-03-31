@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		A25F0AC029D6A12100C089A1 /* LikedVideosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25F0ABF29D6A12100C089A1 /* LikedVideosView.swift */; };
 		A25F0AC229D6A13F00C089A1 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25F0AC129D6A13F00C089A1 /* NotesView.swift */; };
+		A25F0AC429D6A94A00C089A1 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25F0AC329D6A94A00C089A1 /* PostView.swift */; };
+		A25F0AC829D6AA7900C089A1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25F0AC729D6AA7900C089A1 /* Comment.swift */; };
+		A25F0ACA29D6AA9700C089A1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25F0AC929D6AA9700C089A1 /* Post.swift */; };
 		A2CEBB2729CBF89C004060D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2CEBB0F29CBF89A004060D8 /* GoogleService-Info.plist */; };
 		A2CEBB2829CBF89C004060D8 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEBB1029CBF89A004060D8 /* SplashView.swift */; };
 		A2CEBB2929CBF89C004060D8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEBB1129CBF89A004060D8 /* LoginView.swift */; };
@@ -33,6 +36,9 @@
 /* Begin PBXFileReference section */
 		A25F0ABF29D6A12100C089A1 /* LikedVideosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedVideosView.swift; sourceTree = "<group>"; };
 		A25F0AC129D6A13F00C089A1 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		A25F0AC329D6A94A00C089A1 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		A25F0AC729D6AA7900C089A1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		A25F0AC929D6AA9700C089A1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A2CEBADF29CBF760004060D8 /* Skul(e2).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skul(e2).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CEBB0F29CBF89A004060D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2CEBB1029CBF89A004060D8 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -81,10 +87,13 @@
 				A2CEBB0F29CBF89A004060D8 /* GoogleService-Info.plist */,
 				A2CEBB1629CBF89B004060D8 /* HomeView.swift */,
 				A2CEBB1729CBF89B004060D8 /* ImagePicker.swift */,
+				A25F0AC329D6A94A00C089A1 /* PostView.swift */,
 				A2CEBB1129CBF89A004060D8 /* LoginView.swift */,
 				A2CEBB1329CBF89B004060D8 /* MainView.swift */,
 				A2CEBB1F29CBF89B004060D8 /* ProfileView.swift */,
 				A2CEBB2429CBF89C004060D8 /* SearchView.swift */,
+				A25F0AC729D6AA7900C089A1 /* Comment.swift */,
+				A25F0AC929D6AA9700C089A1 /* Post.swift */,
 				A2CEBB2629CBF89C004060D8 /* Skul(e2)-Bridging-Header.h */,
 				A2CEBB1029CBF89A004060D8 /* SplashView.swift */,
 				A2CEBB1529CBF89B004060D8 /* TeamView.swift */,
@@ -186,14 +195,17 @@
 				A2CEBB3A29CBF89C004060D8 /* Firebasestorage.swift in Sources */,
 				A2CEBB3729CBF89C004060D8 /* FirebaseManager.swift in Sources */,
 				A2CEBB2E29CBF89C004060D8 /* HomeView.swift in Sources */,
+				A25F0AC829D6AA7900C089A1 /* Comment.swift in Sources */,
 				A2CEBB2B29CBF89C004060D8 /* MainView.swift in Sources */,
 				A2CEBB3329CBF89C004060D8 /* CameraView.swift in Sources */,
 				A2CEBB2829CBF89C004060D8 /* SplashView.swift in Sources */,
 				A2CEBB3229CBF89C004060D8 /* user.swift in Sources */,
 				A2CEBB2F29CBF89C004060D8 /* ImagePicker.swift in Sources */,
+				A25F0AC429D6A94A00C089A1 /* PostView.swift in Sources */,
 				A2CEBB3929CBF89C004060D8 /* SearchView.swift in Sources */,
 				A2CEBB3529CBF89C004060D8 /* App.swift in Sources */,
 				A2CEBB3429CBF89C004060D8 /* ProfileView.swift in Sources */,
+				A25F0ACA29D6AA9700C089A1 /* Post.swift in Sources */,
 				A25F0AC229D6A13F00C089A1 /* NotesView.swift in Sources */,
 				A2CEBB2D29CBF89C004060D8 /* TeamView.swift in Sources */,
 			);
